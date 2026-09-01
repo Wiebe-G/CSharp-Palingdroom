@@ -8,6 +8,7 @@ namespace PalingdroomCijfers
 {
     internal class Program
     {
+        // lijst om bevestigde nummers in op te slaan
         internal LinkedList<ulong> lijst = new LinkedList<ulong>();
         static void Main(string[] args)
         {
@@ -36,15 +37,14 @@ namespace PalingdroomCijfers
                     lijst.AddLast(Sum);
                 }
 
-                // een zeer helder idee
-                // 89999 keer de loop uitvoeren
-                // 5head
-                //if (i == 99999)
-                //{
-                //    num2++;
-                //    i = 10000;
-                //}
+                if (i == 99999)
+                {
+                    num2++;
+                    i = 10000;
+                }
             }
+
+            Console.WriteLine($"Hoogste cijfer is ${lijst.Max()}");
         }
 
         internal bool IsPalindrome(ulong Sum)
