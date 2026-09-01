@@ -16,25 +16,39 @@ namespace PalingdroomCijfers
 
         internal void MaxPalingdroomProduct()
         {
-            int Sum;
-            for (int i = 10000; i <= 99999; i++)
+            ulong Sum;
+            for (ulong i = 10000; i <= 99999; i++)
+            //for (ulong i = 3; i < 15; i++)
             {
                 Sum = i * i;
                 if (IsPalindrome(Sum))
                 {
-                    Console.WriteLine($"{Sum} is wel een palindroom");
+                    Console.WriteLine($"{Sum} is een palindroom");
                 }
             }
         }
 
-        internal bool IsPalindrome(int Sum)
+        internal bool IsPalindrome(ulong Sum)
         {
             // check hier of palindroom is
-            if (Sum > 0)
+            //return Sum.ToString().SequenceEqual(Sum.ToString().Reverse());
+            if (Sum < 0)
             {
-                return true;
+                return false;
             }
-            return false;
+
+            // loop door Sum, pak laatste digit, en zet die als eerste in New
+            ulong Original = Sum;
+            ulong Reversed = 0;
+
+            while (Sum > 0)
+            {
+                Reversed = (Reversed * 10) + Sum % 10;
+                Sum /= 10;
+            }
+
+            return Original == Reversed;
         }
+
     }
 }
