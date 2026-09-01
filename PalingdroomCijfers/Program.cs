@@ -18,6 +18,7 @@ namespace PalingdroomCijfers
 
         internal void MaxPalingdroomProduct()
         {
+            // TODO: Maak dit sneller
             ulong Sum;
             ulong num2 = 10000;
             for (ulong i = 10000; i <= 99999; i++)
