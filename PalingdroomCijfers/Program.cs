@@ -10,7 +10,31 @@ namespace PalingdroomCijfers
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test");
+            Program program = new Program();
+            program.MaxPalingdroomProduct();
+        }
+
+        internal void MaxPalingdroomProduct()
+        {
+            int Sum;
+            for (int i = 10000; i <= 99999; i++)
+            {
+                Sum = i * i;
+                if (IsPalindrome(Sum))
+                {
+                    Console.WriteLine($"{Sum} is wel een palindroom");
+                }
+            }
+        }
+
+        internal bool IsPalindrome(int Sum)
+        {
+            // check hier of palindroom is
+            if (Sum > 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
