@@ -10,7 +10,7 @@ namespace PalingdroomCijfers
     internal class Palindrome
     {
         // lijst om bevestigde nummers in op te slaan
-        internal LinkedList<ulong> lijst = new LinkedList<ulong>();
+        internal HashSet<ulong> lijst = new HashSet<ulong>();
         ulong MaxValue = 0;
         internal void MaxPalingdroomProduct()
         {
@@ -31,7 +31,7 @@ namespace PalingdroomCijfers
                 if (IsPalindrome(Sum))
                 {
                     Console.WriteLine($"{Sum} is een palindroom.");
-                    lijst.AddLast(Sum);
+                    lijst.Add(Sum);
                     if (Sum > MaxValue)
                     {
                         MaxValue = Sum;
@@ -61,6 +61,7 @@ namespace PalingdroomCijfers
              * sommige nummers als ie laatste pakt, plakt die niet aan bij Reversed
              * vooral wanneer het 0 is
              * waarom 
+             * misschien de while veranderen naar loop die lengte pakt, en dan laatste digit pakt, en die op index 0 of 1 of wat dan ook zet in Reversed
             */
             while (Sum > 0)
             {
