@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -53,23 +54,31 @@ namespace PalingdroomCijfers
             // check hier of palindroom is
 
             // loop door Sum, pak laatste digit, en zet die als eerste in New
-            ulong Original = Sum;
-            ulong Reversed = 0;
-
-            /* 
-             * todo: fix deze rare shit
-             * sommige nummers als ie laatste pakt, plakt die niet aan bij Reversed
-             * vooral wanneer het 0 is
-             * waarom 
-             * misschien de while veranderen naar loop die lengte pakt, en dan laatste digit pakt, en die op index 0 of 1 of wat dan ook zet in Reversed
-            */
-            while (Sum > 0)
+            string Original = Sum.ToString();
+            string Reversed = ReverseString(Sum.ToString());
+            if (Reversed == Original)
             {
-                Reversed = (Reversed * 10) + Sum % 10;
-                Sum /= 10;
+                return true;
             }
 
-            return Original == Reversed;
+            return false;
+            //while (Sum > 0)
+            //{
+            //    Reversed = (Reversed * 10) + Sum % 10;
+            //    Sum /= 10;
+            //}
+
+            //return Original == Reversed;
+        }
+
+        private string ReverseString(string Sum)
+        {
+            if (Sum.Length == 0)
+            {
+                return Sum;
+            }
+
+            return ReverseString(Sum.Substring(1)) + Sum[0];
         }
     }
 }

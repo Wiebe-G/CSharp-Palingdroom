@@ -1,0 +1,7 @@
+D:\School\C#\PalingdroomCijfers\PalingdroomCijfers\bin\Release\PalingdroomCijfers.exe.config
+D:\School\C#\PalingdroomCijfers\PalingdroomCijfers\bin\Release\PalingdroomCijfers.exe
+D:\School\C#\PalingdroomCijfers\PalingdroomCijfers\bin\Release\PalingdroomCijfers.pdb
+D:\School\C#\PalingdroomCijfers\PalingdroomCijfers\obj\Release\PalingdroomCijfers.csproj.AssemblyReference.cache
+D:\School\C#\PalingdroomCijfers\PalingdroomCijfers\obj\Release\PalingdroomCijfers.csproj.CoreCompileInputs.cache
+D:\School\C#\PalingdroomCijfers\PalingdroomCijfers\obj\Release\PalingdroomCijfers.exe
+D:\School\C#\PalingdroomCijfers\PalingdroomCijfers\obj\Release\PalingdroomCijfers.pdb
