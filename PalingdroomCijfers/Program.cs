@@ -13,7 +13,6 @@ namespace PalingdroomCijfers
         static void Main(string[] args)
         {
             Palindrome palindrome = new Palindrome();
-            ThreadPool.QueueUserWorkItem(o => palindrome.MaxPalingdroomProduct());
             palindrome.MaxPalingdroomProduct();
         }
     }
